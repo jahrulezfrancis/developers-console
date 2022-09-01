@@ -11,7 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 export default function NavigationBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -122,7 +122,7 @@ export default function NavigationBar() {
                         aria-label="open drawer"
                         sx={{ mr: 2 }}
                     >
-                        <MenuIcon />
+                        <MenuIcon fontSize='large' />
                     </IconButton>
                     <Typography
                         variant="h6"
@@ -169,7 +169,7 @@ export default function NavigationBar() {
                             onClick={handleMobileMenuOpen}
                             color="inherit"
                         >
-                            <AccountCircleIcon fontSize='large' />
+                            <DashboardIcon fontSize='large' />
                         </IconButton>
                     </Box>
                 </Toolbar>

@@ -52,9 +52,9 @@ export default function FixedBottomNavigation() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="Desert" icon={<RestoreIcon />} />
-          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+          <BottomNavigationAction label="Frequent" icon={<RestoreIcon />} />
+          <BottomNavigationAction label="Liked" icon={<FavoriteIcon />} />
+          <BottomNavigationAction label="Deleted" icon={<ArchiveIcon />} />
         </BottomNavigation>
       </Paper>
     </Box>

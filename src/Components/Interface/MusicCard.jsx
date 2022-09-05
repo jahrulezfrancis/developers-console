@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
+import { Paper } from '@mui/material';
 
 export default function MediaControlCard() {
     const theme = useTheme();
@@ -44,4 +45,48 @@ export default function MediaControlCard() {
             />
         </Card>
     );
+}
+
+export function Bookmark() {
+    const DemoCard = () => {
+        return (
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexWrap: 'wrap',
+                    '& > :not(style)': {
+                        m: 1,
+                        width: 128,
+                        height: 128,
+                    },
+                }}
+            >
+                <Paper elevation={3} />
+                <Paper elevation={3} />
+                <Paper elevation={3} />
+            </Box>
+        )
+    }
+
+    return (
+        <Box justifyContent='center'>
+            <DemoCard />
+            <DemoCard />
+            <DemoCard />
+            <h1 sx={{ textAlign: 'center' }} >yeah this is the Bookmark page you know</h1>
+            <DemoCard />
+            <DemoCard />
+            <DemoCard />
+        </Box>
+    )
+}
+
+export function Profile() {
+    return (
+        <Box>
+            <h1>yeah this is the Profile page you know</h1>
+            <MediaControlCard />
+        </Box>
+    )
 }

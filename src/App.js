@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import NavigationBar from './AppBar';
 import FixedBottomNavigation from './BottomNav';
-import MediaControlCard, { Bookmark, Profile } from './Components/Interface/MusicCard';
+import { Bookmark, Home, ProfilePage } from './Components/Interface/Routes';
 
 function App() {
   return (
@@ -10,9 +10,9 @@ function App() {
      <NavigationBar />
      <FixedBottomNavigation />
      <Routes>
-      <Route path='home' element={<MediaControlCard />}></Route>
+      <Route path='home' element={<Home />}></Route>
       <Route path='bookmark' element={<Bookmark />}></Route>
-      <Route path='profile' element={<Profile />}></Route>
+      <Route path='profile' element={<ProfilePage />}></Route>
      </Routes>
     </div>
   )

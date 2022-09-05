@@ -8,10 +8,11 @@ import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
+import AddIcon from '@mui/icons-material/Add';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 export default function NavigationBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -19,10 +20,6 @@ export default function NavigationBar() {
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-    const handleProfileMenuOpen = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
 
     const handleMobileMenuClose = () => {
         setMobileMoreAnchorEl(null);
@@ -77,12 +74,12 @@ export default function NavigationBar() {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="error">
-                        <MailIcon />
-                    </Badge>
+                <IconButton
+                    color='inherit'
+                >
+                    <SettingsIcon />
                 </IconButton>
-                <p>Messages</p>
+                <p>Account settings</p>
             </MenuItem>
             <MenuItem>
                 <IconButton
@@ -96,18 +93,6 @@ export default function NavigationBar() {
                 </IconButton>
                 <p>Notifications</p>
             </MenuItem>
-            <MenuItem onClick={handleProfileMenuOpen}>
-                <IconButton
-                    size="large"
-                    aria-label="account of current user"
-                    aria-controls="primary-search-account-menu"
-                    aria-haspopup="true"
-                    color="inherit"
-                >
-                    <AccountCircle />
-                </IconButton>
-                <p>Profile</p>
-            </MenuItem>
         </Menu>
     );
 
@@ -115,20 +100,11 @@ export default function NavigationBar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="open drawer"
-                        sx={{ mr: 2 }}
-                    >
-                        <MenuIcon fontSize='large' />
-                    </IconButton>
                     <Typography
                         variant="h6"
                         noWrap
                         component="div"
-                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                        sx={{ display: { xs: 'block', sm: 'block' } }}
                     >
                         Developers Console
                     </Typography>
@@ -147,17 +123,6 @@ export default function NavigationBar() {
                             <Badge badgeContent={17} color="error">
                                 <NotificationsIcon />
                             </Badge>
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-controls={menuId}
-                            aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}
-                            color="inherit"
-                        >
-                            <AccountCircle />
                         </IconButton>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

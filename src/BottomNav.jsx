@@ -7,7 +7,6 @@ import Person from '@mui/icons-material/Person';
 import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import Paper from '@mui/material/Paper';
 import Home from '@mui/icons-material/Home';
-import { NavLink } from 'react-router-dom';
 
 
 export default function FixedBottomNavigation() {

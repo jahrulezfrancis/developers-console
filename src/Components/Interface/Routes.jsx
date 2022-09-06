@@ -2,7 +2,7 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 import PostCard from './Post';
-import { SignupForm } from '../Pages/SignUp';
+import { SignInForm } from '../Pages/SignUp';
 
 
 const DemoCard = () => {
@@ -46,7 +46,7 @@ export function Bookmark() {
 export function ProfilePage() {
     return (
         <Box>
-           <SignupForm />
+           <SignInForm />
         </Box>
     )
 }

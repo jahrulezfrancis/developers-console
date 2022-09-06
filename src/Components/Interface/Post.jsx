@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -16,6 +16,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Box } from '@mui/material';
 import UserAvatar from "./userAvatar.jpg";
+
+import axios from 'axios'
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -36,7 +38,7 @@ export default function PostCard() {
     };
 
     return (
-        <Box padding='10px' sx={{ marginBottom: '50px' }}>
+        <Box padding='15px' sx={{ marginBottom: '50px' }}>
             <Card sx={{ maxWidth: 345 }}>
                 <CardHeader
                     avatar={

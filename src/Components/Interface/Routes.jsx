@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 import PostCard from './Post';
 import { SignInForm } from '../Pages/SignUp';
+import AxiosDemo from './axiosDemo';
 
 
 const DemoCard = () => {
@@ -29,7 +30,7 @@ const DemoCard = () => {
 export function Bookmark() {
 
     return (
-        <Box justifyContent='center'>
+        <Box justifyContent='center' padding={'10px'}>
             <DemoCard />
             <DemoCard />
             <DemoCard />
@@ -55,6 +56,7 @@ export function Home() {
     return (
         <Box justifyContent='center'>
             <PostCard />
+            <AxiosDemo />
         </Box>
     )
 }

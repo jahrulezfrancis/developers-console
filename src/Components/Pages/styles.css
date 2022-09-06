@@ -1,6 +1,25 @@
-input[type=email], [type=text], [type=password] {
-    width: 100%;
+input[type=email],
+[type=text],
+[type=password] {
+    width: 90%;
     height: 60px;
+    margin: auto;
+}
+
+
+input[type=email],
+[type=text],
+[type=password]::placeholder {
+    text-align: center;
+}
+
+@media screen and (max-width: '500px') {
+
+    input[type=email],
+    [type=text],
+    [type=password] {
+        width: 50%;
+    }
 }
 
 .submit-btn {

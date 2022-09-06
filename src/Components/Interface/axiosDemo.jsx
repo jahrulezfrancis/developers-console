@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import axios from 'axios';
+import { Box } from '@mui/system';
 
-export default function AxiosDemo() {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
-    const [postItem, setpostItem] = useState(null);
-    const newPost = null;
 
-    useEffect(() => {
-        axios.get(url)
-            .then(response => {
-                setpostItem(response.data)
-            })
-    }, [url]);
-    return (
-        <div>
-            {newPost}
-        </div>
-    )
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise.then((response) => {
+    const jsonPromise = response.json();
+    jsonPromise.then((data) => {
+        console.log(data[0].name);
+    });
+});
+
+
+
+async function DemoCard() {
+    const Fetched = await fetch('https://jsonplaceholder.typicode.com/posts')
+    Fetched.then((response) =>{
+        const jsonPromise = response.json();
+        jsonPromise.then((data))
+    })
 }
+export default DemoCard;

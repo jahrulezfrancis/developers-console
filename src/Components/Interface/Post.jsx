@@ -15,6 +15,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Box } from '@mui/material';
+import UserAvatar from "./userAvatar.jpg";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -35,12 +36,12 @@ export default function PostCard() {
     };
 
     return (
-        <Box padding={'10px'}>
+        <Box padding='10px' sx={{ marginBottom: '50px' }}>
             <Card sx={{ maxWidth: 345 }}>
                 <CardHeader
                     avatar={
-                        <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                            R
+                        <Avatar sx={{ bgcolor: red[500] }} aria-label="Jahrulez">
+                            <img src={UserAvatar} alt='profile picture' />
                         </Avatar>
                     }
                     action={
@@ -48,13 +49,13 @@ export default function PostCard() {
                             <MoreVertIcon />
                         </IconButton>
                     }
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
+                    title="Jahrulez Francis"
+                    subheader="September 6, 2022"
                 />
                 <CardMedia
                     component="img"
                     height="194"
-                    image="/static/images/cards/paella.jpg"
+                    image={UserAvatar}
                     alt="Paella dish"
                 />
                 <CardContent>
@@ -104,7 +105,7 @@ export default function PostCard() {
                             stirring, until mussels have opened and rice is just tender, 5 to 7
                             minutes more. (Discard any mussels that don&apos;t open.)
                         </Typography>
-                        <Typography>
+                        <Typography sx={{ marginBottom: '15px' }}>
                             Set aside off of the heat to let rest for 10 minutes, and then serve.
                         </Typography>
                     </CardContent>

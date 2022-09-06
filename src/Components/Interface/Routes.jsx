@@ -1,6 +1,7 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
+import PostCard from './Post';
 
 
 const DemoCard = () => {
@@ -60,15 +61,7 @@ export function ProfilePage() {
 export function Home() {
     return (
         <Box justifyContent='center'>
-            <DemoCard />
-            <DemoCard />
-            <DemoCard />
-            <Box textAlign={'center'}>
-                <h1>yeah this is the Home page you know</h1>
-            </Box>
-            <DemoCard />
-            <DemoCard />
-            <DemoCard />
+            <PostCard />
         </Box>
     )
 }

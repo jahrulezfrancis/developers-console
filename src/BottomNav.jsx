@@ -7,6 +7,7 @@ import Person from '@mui/icons-material/Person';
 import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import Paper from '@mui/material/Paper';
 import Home from '@mui/icons-material/Home';
+import { Link as RouterLink } from 'react-router-dom';
 
 
 export default function FixedBottomNavigation() {
@@ -24,9 +25,9 @@ export default function FixedBottomNavigation() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction href='/home' label="Home" icon={<Home />} />
-          <BottomNavigationAction href='/bookmark' label="Bookmarks" icon={<BookmarksIcon />} />
-          <BottomNavigationAction href='/profile' label="Account" icon={<Person />} />
+          <BottomNavigationAction component={ RouterLink } to="home" label="Home" icon={<Home />} />
+          <BottomNavigationAction component={ RouterLink } to="bookmark" label='Bookmark' icon={<BookmarksIcon />} />
+          <BottomNavigationAction component={ RouterLink } to='/profile' label="Account" icon={<Person />} />
         </BottomNavigation>
       </Paper>
     </Box>

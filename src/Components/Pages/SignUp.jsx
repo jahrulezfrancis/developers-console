@@ -45,55 +45,55 @@ export const SignupForm = () => {
         }
     });
     return (
-        <form onSubmit={formik.handleSubmit}>
-            <Box sx={{ width: { sx: '40%', md: '50%', lg: '80%' } }}>
-                <Box sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    padding: '10px',
-                    textAlign: 'center',
-                    fontSize: '16px'
-                }}>
-                    <label htmlFor="email">Full Name</label>
-                    <input
-                        placeholder="full name here"
-                        id="fullname"
-                        name="fullName"
-                        type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.fullname}
-                    />
-                    <label htmlFor="email">Username</label>
-                    <input
-                        placeholder="username"
-                        id="username"
-                        name="username"
-                        type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.username}
-                    />
-                    <label htmlFor="email">Email Address</label>
-                    <input
-                        placeholder="email"
-                        id="email"
-                        name="email"
-                        type="email"
-                        onChange={formik.handleChange}
-                        value={formik.values.email}
-                    />
-                    <label htmlFor="email">Password</label>
-                    <input
-                        placeholder="password"
-                        id="password"
-                        name="password"
-                        type="password"
-                        onChange={formik.handleChange}
-                        value={formik.values.password}
-                    />
-                    <button className="submit-btn" type="submit">Register</button>
-                </Box >
-            </Box>
-        </form>
+            <form onSubmit={formik.handleSubmit}>
+                <Box sx={{ width: { sx: '40%', md: '50%', lg: '40%' } }} ></Box>
+                    <Box sx={{
+                        display: "flex",
+                        justifyContent: 'center',
+                        flexDirection: "column",
+                        padding: '10px',
+                        fontSize: '16px',
+                        textAlign: 'center'
+                    }}>
+                        <label htmlFor="email">Full Name</label>
+                        <input
+                            placeholder="full name here"
+                            id="fullname"
+                            name="fullName"
+                            type="text"
+                            onChange={formik.handleChange}
+                            value={formik.values.fullname}
+                        />
+                        <label htmlFor="email">Username</label>
+                        <input
+                            placeholder="username"
+                            id="username"
+                            name="username"
+                            type="text"
+                            onChange={formik.handleChange}
+                            value={formik.values.username}
+                        />
+                        <label htmlFor="email">Email Address</label>
+                        <input
+                            placeholder="email"
+                            id="email"
+                            name="email"
+                            type="email"
+                            onChange={formik.handleChange}
+                            value={formik.values.email}
+                        />
+                        <label htmlFor="email">Password</label>
+                        <input
+                            placeholder="password"
+                            id="password"
+                            name="password"
+                            type="password"
+                            onChange={formik.handleChange}
+                            value={formik.values.password}
+                        />
+                        <button className="submit-btn" type="submit">Register</button>
+                    </Box >
+            </form>
     );
 };
 

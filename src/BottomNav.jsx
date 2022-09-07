@@ -11,7 +11,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 
 export default function FixedBottomNavigation() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(null);
   const ref = React.useRef(null);
 
   return (

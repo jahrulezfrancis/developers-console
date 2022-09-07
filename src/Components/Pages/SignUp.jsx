@@ -3,6 +3,39 @@ import { useFormik } from "formik";
 import { Box } from "@mui/system";
 import "./styles.css";
 import { Typography } from "@mui/material";
+import Tab from '@mui/material/Tab';
+import TabContext from '@material-ui/lab/TabContext';
+import TabList from '@material-ui/lab/TabList';
+import TabPanel from '@material-ui/lab/TabPanel';
+
+export function UserLoginTab() {
+    const [value, setValue] = React.useState('1');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    return (
+        <Box sx={{ width: '100%', typography: 'body1' }} justifyContent='center'>
+            <TabContext value={value}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }} justifyContent='center' alignItems='center'>
+                    <TabList onChange={handleChange} aria-label="lab API tabs example" centered>
+                        <Tab label="Login" value="1" />
+                        <Tab label="Sign up" value="2" />
+                    </TabList>
+                </Box>
+                <TabPanel value="1">
+                    <SignInForm />
+                </TabPanel>
+                <TabPanel value="2">
+                    <SignupForm />
+                </TabPanel>
+            </TabContext>
+        </Box>
+    );
+}
+
+
 
 export const SignupForm = () => {
     const formik = useFormik({
@@ -13,7 +46,7 @@ export const SignupForm = () => {
     });
     return (
         <form onSubmit={formik.handleSubmit}>
-            <Box sx={{width: { sx: '40%', md: '50%', lg: '80%' }}}>
+            <Box sx={{ width: { sx: '40%', md: '50%', lg: '80%' } }}>
                 <Box sx={{
                     display: "flex",
                     flexDirection: "column",
@@ -21,9 +54,6 @@ export const SignupForm = () => {
                     textAlign: 'center',
                     fontSize: '16px'
                 }}>
-                    <Typography variant='h4' marginBottom={'10px'}>
-                        Sign Up
-                    </Typography>
                     <label htmlFor="email">Full Name</label>
                     <input
                         placeholder="full name here"
@@ -84,9 +114,6 @@ export const SignInForm = () => {
                 textAlign: 'center',
                 fontSize: '16px'
             }}>
-                <Typography variant='h4' marginBottom={'10px'}>
-                    Login
-                </Typography>
                 <label htmlFor="email">Username</label>
                 <input
                     placeholder="username"

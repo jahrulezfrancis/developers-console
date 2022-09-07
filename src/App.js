@@ -4,18 +4,20 @@ import NavigationBar from './AppBar';
 import FixedBottomNavigation from './BottomNav';
 import DemoCard from './Components/Interface/axiosDemo';
 import { Bookmark, Home, ProfilePage } from './Components/Interface/Routes';
+import PageNotFound from './Components/Pages/404Error';
+import { UserLoginTab } from './Components/Pages/SignUp';
 
 function App() {
   return (
     <div>
-     <NavigationBar />
-     <FixedBottomNavigation />
-     <Routes>
-      <Route path='home' element={<Home />}></Route>
-      <Route path='bookmark' element={<Bookmark />}></Route>
-      <Route path='profile' element={<ProfilePage />}></Route>
-      <Route path='demo' element={<DemoCard />}></Route>
-     </Routes>
+      <NavigationBar />
+      <FixedBottomNavigation />
+      <Routes>
+        <Route path='home' element={<Home />} />
+        <Route path='bookmark' element={<Bookmark />} />
+        <Route path='profile' element={<UserLoginTab />} />
+        <Route path='*' element={<PageNotFound />} />
+      </Routes>
     </div>
   )
 }

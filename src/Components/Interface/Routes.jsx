@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 import PostCard from './Post';
 import { SignInForm } from '../Pages/SignUp';
+import BookmarkPage from '../Pages/Bookmark';
 
 
 const DemoCard = () => {
@@ -30,15 +31,7 @@ export function Bookmark() {
 
     return (
         <Box justifyContent='center' padding={'10px'}>
-            <DemoCard />
-            <DemoCard />
-            <DemoCard />
-            <Box textAlign={'center'}>
-                <h1>The Bookmark page</h1>
-            </Box>
-            <DemoCard />
-            <DemoCard />
-            <DemoCard />
+            <BookmarkPage />
         </Box>
     )
 }

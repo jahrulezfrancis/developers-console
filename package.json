@@ -9,6 +9,7 @@
     "@material-ui/lab": "^4.0.0-alpha.61",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.3",
+    "@mui/x-data-grid": "^5.17.1",
     "axios": "^0.27.2",
     "formik": "^2.2.9",
     "react": "^18.2.0",

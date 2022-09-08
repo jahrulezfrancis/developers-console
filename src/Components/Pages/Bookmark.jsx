@@ -5,34 +5,32 @@ import { DataGrid } from '@mui/x-data-grid';
 
 
 const columns = [
-    { field: 'id', headerName: 'ID', width: 90 },
+    { field: 'id', headerName: 'ID', width: 20 },
     {
-        field: 'firstName',
-        headerName: 'First name',
-        width: 150,
+        field: 'PostAuthor',
+        headerName: 'Post Author',
+        width: 100,
         editable: true,
     },
     {
-        field: 'fullName',
-        headerName: 'Full name',
+        field: 'Thread',
+        headerName: 'Thread',
         description: 'This column has a value getter and is not sortable.',
         sortable: false,
         width: 160,
-        valueGetter: (params) =>
-            `${params.row.firstName || ''} ${params.row.lastName || ''}`,
     },
 ];
 
 const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+    { id: 1, Thread: 'How to become a developer', PostAuthor: 'Jon', age: 35 },
+    { id: 2, Thread: 'Whats every programmer should do', PostAuthor: 'Cersei', age: 42 },
+    { id: 3, Thread: 'Advice for developer in their 20\'s', PostAuthor: 'Jaime', age: 45 },
+    { id: 4, Thread: 'Books for developers', PostAuthor: 'Arya', age: 16 },
+    { id: 5, Thread: 'How to pitch an idea and sell your projects', PostAuthor: 'Daenerys', age: null },
+    { id: 6, Thread: 'Digital marketing for beginners', PostAuthor: null, age: 150 },
+    { id: 7, Thread: 'How to start small and end big', PostAuthor: 'Ferrara', age: 44 },
+    { id: 8, Thread: 'Best exercise for the brain', PostAuthor: 'Rossini', age: 36 },
+    { id: 9, Thread: 'you can start small no matter how little', PostAuthor: 'Harvey', age: 65 },
 ];
 
 export default function BookmarkPage() {

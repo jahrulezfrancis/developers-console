@@ -28,7 +28,9 @@ export function UserLoginTab() {
                     <SignInForm />
                 </TabPanel>
                 <TabPanel value="2">
+                <Box sx={{ marginBottom:'30px' }}>                
                     <SignupForm />
+                </Box>
                 </TabPanel>
             </TabContext>
         </Box>

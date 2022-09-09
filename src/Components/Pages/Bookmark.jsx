@@ -17,7 +17,7 @@ const columns = [
         headerName: 'Thread',
         description: 'This column has a value getter and is not sortable.',
         sortable: false,
-        width: 160,
+        width: 400,
     },
 ];
 

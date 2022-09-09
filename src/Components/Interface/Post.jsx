@@ -9,15 +9,13 @@ import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Box } from '@mui/material';
 import UserAvatar from "./userAvatar.jpg";
+import { Box } from '@mui/material';
 
-import axios from 'axios'
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -40,9 +38,9 @@ export default function PostCard() {
     return (
         <Box padding='15px' sx={{ marginBottom: '50px' }}>
             <Card sx={{ maxWidth: 345 }}>
-                <CardHeader
+                <CardHeader sx={{ position: 'relative', zIndex: "1" }}
                     avatar={
-                        <Avatar sx={{ bgcolor: red[500] }} aria-label="Jahrulez">
+                        <Avatar aria-label="Jahrulez">
                             <img src={UserAvatar} alt='profile picture' />
                         </Avatar>
                     }

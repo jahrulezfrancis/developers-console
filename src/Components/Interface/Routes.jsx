@@ -1,7 +1,6 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
-import PostCard from './Post';
 import { SignInForm } from '../Pages/SignUp';
 import BookmarkPage from '../Pages/Bookmark';
 
@@ -40,14 +39,6 @@ export function ProfilePage() {
     return (
         <Box>
             <SignInForm />
-        </Box>
-    )
-}
-
-export function Home() {
-    return (
-        <Box justifyContent='center'>
-            <PostCard />
         </Box>
     )
 }
